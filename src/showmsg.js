@@ -1,12 +1,8 @@
 const messages = [
-  "I didn't want my confession to be an message only",
-  "So I thought I could add in a little effort^^",
-  "and I should have said this when we we're together",
-  "But I was too shy to say it in person",
-  "Anyways, Sorry for not messaging you until now",
-  "I didn't mean to I just needed time to do this:>",
-  "Tbh I don't know how to express my feelings",
-  "I always struggle at expressing them, so this is only the way I know",
+  "Hey, I know this is a bit weird, but I wanted to tell you something",
+  "I know we haven't talked much, I just needed some time to gather my thoughts",
+  "I wanted to tell you how I feel but I get nervous when I try to say it",
+  "So I thought I could write it down instead",
   "I made you a poem, I was supposed to give you this by a letter in person",
   "But I think this is more of a efficient way of showing you how I feel",
   "I hope you'll like it, and I hope you don't mind me doing this",
@@ -35,7 +31,17 @@ const messages = [
   "when it began,",
   "I’ll say: It didn’t.",
   "It just always was.",
-  "..."
+  "...",
+  "I didn't want my confession to be a message only",
+  "So I thought I could add in a little effort^^",
+  "and I know I should have said this when we we're together",
+  "But I was too shy to say it in person",
+  "Anyways, Sorry for not messaging you until now",
+  "I didn't mean to I just needed time to do this:>",
+  "Tbh I don't know how to express my feelings",
+  "I always struggle at expressing them, so this is only the way I know",
+  "Again sorry for not messaging you until now",
+  "and I hope you enjoyed the poem"
 ];
 
 function typeWriterEffect(text, container, callback) {
