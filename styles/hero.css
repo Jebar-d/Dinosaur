@@ -172,3 +172,34 @@
   
   /* 2xl */
   /* @media (min-width: 1536px) {} */
+/* ── Navigation menu ─────────────────────────────────────────────────────── */
+
+.menu__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hero__btn--back {
+  background: transparent;
+  color: var(--clr-brown);
+  border: 2px solid var(--clr-brown);
+  margin-top: 0.25rem;
+}
+
+.hero__btn--back:hover,
+.hero__btn--back:focus {
+  background: var(--clr-brown);
+  color: #fff;
+}
+
+@media (min-width: 475px) {
+  .menu__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
