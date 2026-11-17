@@ -2,30 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>^-^</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff2d7" />
+    <title>For Selie</title>
     <link rel="stylesheet" href="styles/hero.css" />
   </head>
   <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <main>
-
-
-      
-      <section class="hero container">
-        <img class="hero__img" src="ber.png" alt="Bear">
-        <h2 class="hero__subtitle">If I'm honest</h2>
-        <div id="typewriter-container"></div>
+      <section class="landing" aria-label="Music and invitation">
+        <img class="landing__bear" src="/ber.png" alt="" />
+        <img class="landing__flower landing__flower--one" src="/ovrlay2.png" alt="" />
+        <img class="landing__flower landing__flower--two" src="/ovrlay3.png" alt="" />
+        <div class="music-widget" aria-label="Music player">
+          <div class="music-widget__top">
+            <div class="music-widget__art" aria-hidden="true"></div>
+            <div class="music-widget__track">
+              <span class="music-widget__eyebrow">NOW PLAYING</span>
+              <strong>Nothing</strong>
+              <span>Bruno Major</span>
+            </div>
+            <span class="music-widget__device" aria-hidden="true">⌁</span>
+          </div>
+          <audio id="song" preload="metadata"><source src="/nothing.mp3" type="audio/mpeg" /></audio>
+          <div class="music-widget__timeline">
+            <span id="current-time">0:00</span>
+            <input id="song-progress" type="range" min="0" max="100" value="0" aria-label="Song progress" />
+            <span id="duration">0:00</span>
+          </div>
+          <div class="music-widget__controls">
+            <button class="music-widget__skip" type="button" data-seek="-10" aria-label="Back 10 seconds">↶</button>
+            <button id="play-toggle" class="music-widget__play" type="button" aria-label="Play Nothing" aria-pressed="false">▶</button>
+            <button class="music-widget__skip" type="button" data-seek="10" aria-label="Forward 10 seconds">↷</button>
+          </div>
+          <div class="music-widget__volume" aria-hidden="true"><span>♪</span><i></i><span>♫</span></div>
+          <span id="audio-status" class="music-widget__status" role="status" aria-live="polite"></span>
+        </div>
       </section>
-      <section class="body" id="body"></section>
-      <footer></footer>
-      <div id="app"></div>
-      <script type="module" src="src/main.js"></script>
+
+      <section id="memories" class="scrapbook" aria-label="Photo memories">
+        <article class="scrapbook-scene scrapbook-scene--one">
+          <img class="scrapbook-photo scrapbook-photo--one reveal" src="/selie1.jpe" alt="A photo memory" />
+          <img class="scrapbook-photo scrapbook-photo--two reveal" src="/selie2.jpe" alt="A photo memory" />
+          <img class="scrapbook-photo scrapbook-photo--three reveal" src="/selie3.jpe" alt="A photo memory" />
+          <img class="scrapbook-flower scrapbook-flower--a reveal" src="/ovrlay2.png" alt="" />
+          <img class="scrapbook-flower scrapbook-flower--b reveal" src="/ovrlay3.png" alt="" />
+          <img class="scrapbook-cat reveal" src="/cat.png" alt="" />
+        </article>
+        <article class="scrapbook-scene scrapbook-scene--two">
+          <img class="scrapbook-photo scrapbook-photo--four reveal" src="/selie4.jpe" alt="A photo memory" />
+          <img class="scrapbook-photo scrapbook-photo--five reveal" src="/selie5.jpe" alt="A photo memory" />
+          <img class="scrapbook-flower scrapbook-flower--c reveal" src="/ovrlay2.png" alt="" />
+          <img class="scrapbook-flower scrapbook-flower--d reveal" src="/ovrlay3.png" alt="" />
+          <img class="scrapbook-bear reveal" src="/ber.png" alt="" />
+        </article>
+        <article class="scrapbook-scene scrapbook-scene--three">
+          <img class="scrapbook-photo scrapbook-photo--six reveal" src="/selie6.jpe" alt="A photo memory" />
+          <img class="scrapbook-flower scrapbook-flower--e reveal" src="/ovrlay2.png" alt="" />
+          <img class="scrapbook-flower scrapbook-flower--f reveal" src="/ovrlay3.png" alt="" />
+          <img class="scrapbook-cat scrapbook-cat--last reveal" src="/cat.png" alt="" />
+        </article>
+      </section>
+
+      <section id="letter" class="letter-section" aria-label="Letter">
+        <img class="letter-section__flower letter-section__flower--left" src="/ovrlay2.png" alt="" />
+        <img class="letter-section__flower letter-section__flower--right" src="/ovrlay3.png" alt="" />
+        <figure class="letter-art reveal">
+          <img class="letter-art__image" src="/ovrlay5.jpg" alt="A scrapbook-style music and message design" />
+          <img class="letter-art__flower letter-art__flower--one" src="/ovrlay2.png" alt="" />
+          <img class="letter-art__flower letter-art__flower--two" src="/ovrlay3.png" alt="" />
+        </figure>
+        <div id="letter-envelope" class="letter-envelope">
+          <div class="letter-envelope__flap"></div>
+          <div class="letter-envelope__seal" aria-hidden="true">♥</div>
+        </div>
+        <h2 class="letter-recipient">For Selie</h2>
+        <button id="open-letter" class="landing__open letter-open-button" type="button">Tap to open</button>
+        <div id="letter-paper" class="letter-paper" hidden>
+          <img class="letter-paper__bear" src="/ber.png" alt="" />
+          <div id="typewriter-container" aria-live="polite"></div>
+        </div>
+      </section>
     </main>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
