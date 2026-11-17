@@ -42,7 +42,7 @@ let currentLine = 0;
 let typingTimer;
 
 const EMAILJS_SERVICE_ID = "service_hva6all";
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "ovOHfYVUcS3iouP9j";
 const EMAILJS_TEMPLATES = {
   no: "template_qe5oqvr",
   sure: "template_7y8pyfw",
@@ -268,9 +268,12 @@ function showNoFarewell() {
             await sendEmail(EMAILJS_TEMPLATES.no, "No");
           } catch (error) {
             try {
+            const message = /invalid grant/i.test(error.message)
+              ? "Notification wasn't sent. Reconnect Gmail in EmailJS and try again."
+              : "Notification wasn't sent. Check the EmailJS configuration and try again.";
               sessionStorage.setItem(
                 "email-notification-error",
-                "Notification wasn't sent. Reconnect Gmail in EmailJS and try again.",
+              message,
               );
             } catch {
               // Continue home even if browser storage is unavailable.
